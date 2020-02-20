@@ -25,7 +25,7 @@ The embeddings itself are wrapped into our simple embedding interface, so that t
 embedding.
 
 ```python
-from flair.embeddings import BertEmbeddings
+from flair.embeddings import BertEmbeddings,Sentence
 
 # init embedding
 embedding = BertEmbeddings()
@@ -57,7 +57,7 @@ please have a look at the [model section](#Models).
 The following example shows how to use a DistilBERT model:
 
 ```python
-from flair.embeddings import BertEmbeddings
+from flair.embeddings import BertEmbeddings,Sentence
 
 # init embedding
 embedding = BertEmbeddings(bert_model_or_path="distilbert-base-german-cased")
@@ -74,7 +74,7 @@ embedding.embed(sentence)
 The ALBERT model, proposed by [Lan et. al (2019)](https://arxiv.org/abs/1909.11942) can also be used:
 
 ```python
-from flair.embeddings import BertEmbeddings
+from flair.embeddings import BertEmbeddings,Sentence
 
 # init embedding
 embedding = BertEmbeddings(bert_model_or_path="albert-base-v2")
@@ -96,7 +96,7 @@ GPT is an uni-directional Transformer-based model.
 The following example shows how to use the `OpenAIGPTEmbeddings`:
 
 ```python
-from flair.embeddings import OpenAIGPTEmbeddings
+from flair.embeddings import OpenAIGPTEmbeddings,Sentence
 
 # init embedding
 embedding = OpenAIGPTEmbeddings()
@@ -125,7 +125,7 @@ GPT-2 is also an uni-directional Transformer-based model, that was trained on a 
 The GPT-2 model can be used with the `OpenAIGPT2Embeddings` class:
 
 ```python
-from flair.embeddings import OpenAIGPT2Embeddings
+from flair.embeddings import OpenAIGPT2Embeddings,Sentence
 
 # init embedding
 embedding = OpenAIGPT2Embeddings()
@@ -154,7 +154,7 @@ It is an uni-directional Transformer-based model with relative positioning embed
 The Transformer-XL model can be used with the `TransformerXLEmbeddings` class:
 
 ```python
-from flair.embeddings import TransformerXLEmbeddings
+from flair.embeddings import TransformerXLEmbeddings,Sentence
 
 # init embedding
 embedding = TransformerXLEmbeddings()
@@ -185,7 +185,7 @@ It is an extension of the Transformer-XL model using an autoregressive method to
 The XLNet model can be used with the `XLNetEmbeddings` class:
 
 ```python
-from flair.embeddings import XLNetEmbeddings
+from flair.embeddings import XLNetEmbeddings,Sentence
 
 # init embedding
 embedding = XLNetEmbeddings()
@@ -215,7 +215,7 @@ cross-lingual pretraining.
 The XLM model can be used with the `XLMEmbeddings` class:
 
 ```python
-from flair.embeddings import XLMEmbeddings
+from flair.embeddings import XLMEmbeddings,Sentence
 
 # init embedding
 embedding = XLMEmbeddings()
@@ -244,7 +244,7 @@ and uses an improved pre-training procedure to train a BERT model on a large cor
 It can be used with the `RoBERTaEmbeddings` class:
 
 ```python
-from flair.embeddings import RoBERTaEmbeddings
+from flair.embeddings import RoBERTaEmbeddings,Sentence
 
 # init embedding
 embedding = RoBERTaEmbeddings()
@@ -273,7 +273,7 @@ and was trained on a large French corpus.
 It can be used with the `CamembertEmbeddings` class:
 
 ```python
-from flair.embeddings import CamembertEmbeddings
+from flair.embeddings import CamembertEmbeddings,Sentence
 
 # init embedding
 embedding = CamembertEmbeddings()
@@ -302,7 +302,7 @@ paper, is a multi-lingual language model trained on 2.5TB of filtered CommonCraw
 It can be used with the `XLMRobertaEmbeddings` class:
 
 ```python
-from flair.embeddings import XLMRobertaEmbeddings
+from flair.embeddings import XLMRobertaEmbeddings,Sentence
 
 # init embedding
 embedding = XLMRobertaEmbeddings()
@@ -347,7 +347,7 @@ To use scalar mix, all Transformer-based embeddings in Flair come with a `use_sc
 example shows how to use scalar mix for a base RoBERTa model on all layers:
 
 ```python
-from flair.embeddings import RoBERTaEmbeddings
+from flair.embeddings import RoBERTaEmbeddings,Sentence
 
 # init embedding
 embedding = RoBERTaEmbeddings(pretrained_model_name_or_path="roberta-base", layers="0,1,2,3,4,5,6,7,8,9,10,11,12",
